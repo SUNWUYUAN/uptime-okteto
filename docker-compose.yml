@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+    alist:
+        restart: always
+        volumes:
+            - uptime-data:/app/data
+        ports:
+            - 3001:3001
+        container_name: uptime
+        image: 'louislam/uptime-kuma:latest'
+
+volumes:
+  uptime-data:
+    size: 5Gi
